@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RiCek</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_home_compose">HomeCompose</string>
+</resources>
