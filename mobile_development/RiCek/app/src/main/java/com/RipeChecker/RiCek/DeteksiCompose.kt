@@ -6,7 +6,9 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -39,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.FileProvider
 import coil.compose.AsyncImage
+import com.RipeChecker.RiCek.ui.theme.Purple40
 import com.RipeChecker.RiCek.ui.theme.RiCekTheme
 import java.io.File
 
@@ -58,7 +61,6 @@ class ComposeFileProvider : FileProvider(
 
 @Composable
 fun DeteksiCompose(
-    modifier: Modifier = Modifier,
 ) {
 
     var hasImage by remember {
@@ -84,16 +86,39 @@ fun DeteksiCompose(
     val context = LocalContext.current
 
     Column() {
-        IconButton(
-            onClick = { },
-            modifier = Modifier.padding(top = 20.dp, start = 20.dp).size(60.dp)
-        ) {
-            Icon(
-                imageVector = Icons.Outlined.ArrowBack,
-                contentDescription = "Show more",
+        Box(
+
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(60.dp)
+                .background(Purple40)
+
+        ){
+            IconButton(
+                onClick = { },
+                modifier = Modifier.padding(top = 5.dp, start = 20.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Outlined.ArrowBack,
+                    contentDescription = "back",
+                    modifier = Modifier
+                        .size(40.dp)
+                )
+            }
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
-                    .size(40.dp)
-            )
+                    .fillMaxWidth()
+            ) {
+                Text(
+                    text = "Artikel",
+                    color = Color.White,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .padding(top = 15.dp))
+            }
         }
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -166,12 +191,6 @@ fun DeteksiCompose(
         }
     }
 }
-@Preview(showBackground = true)
-@Composable
-fun HomePreview() {
-    RiCekTheme {
-        DeteksiCompose(Modifier)
-    }
-}
+
 
 

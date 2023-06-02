@@ -36,18 +36,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    DeteksiCompose(Modifier)
+                    DeteksiCompose()
                 }
             }
         }
     }
 }
 
-
-@Preview(showBackground = true)
-@Composable
-fun DeteksiPreview() {
-    RiCekTheme {
-        DeteksiCompose(Modifier)
-    }
-}

@@ -13,6 +13,16 @@
         android:theme="@style/Theme.RiCek"
         tools:targetApi="31">
         <activity
+            android:name=".DetailArtikelActivity"
+            android:exported="false"
+            android:label="@string/title_activity_detail_artikel"
+            android:theme="@style/Theme.RiCek" />
+        <activity
+            android:name=".ArtikelActivity"
+            android:exported="false"
+            android:label="@string/title_activity_artikel"
+            android:theme="@style/Theme.RiCek" />
+        <activity
             android:name=".HomeCompose"
             android:exported="false"
             android:label="@string/title_activity_home_compose"
@@ -33,11 +43,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
             android:name=".ComposeFileProvider"
             android:authorities="com.RipeChecker.RiCek.file_provider"
-            android:grantUriPermissions="true"
-            android:exported="false">
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
