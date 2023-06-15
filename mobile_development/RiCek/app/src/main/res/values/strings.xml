@@ -4,4 +4,5 @@
     <string name="title_activity_home_compose">HomeCompose</string>
     <string name="title_activity_artikel">ArtikelActivity</string>
     <string name="title_activity_detail_artikel">DetailArtikelActivity</string>
+    <string name="title_activity_deteksi">DeteksiActivity</string>
 </resources>
