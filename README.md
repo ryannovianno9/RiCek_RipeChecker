@@ -34,6 +34,12 @@ RiCek(Ripe Checker) is Android application that has feature to check fruits ripe
 ```
 POST https://ricek1-oes4ruxepa-et.a.run.app/
 ```
+Example :
+> Body `form-data`
+> 
+> key: img | type: file | value: {fruitimage}.jpg
+
+
 5. Response
 ```
 {
