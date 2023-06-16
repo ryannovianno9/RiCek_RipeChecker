@@ -1,3 +1,7 @@
+CREDIT
+1. Base API: Rezha Aulia
+2. Updating API: Javier Al Faiza
+
 ### 1. Write App (Flask, TensorFlow)
 
 ### 2. Setup Google Cloud
