@@ -18,11 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.material3.Button
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -284,11 +280,10 @@ private fun uploadImage(
         file.name,
         requestImageFile
     )
-    val dataModel = imageMultipart
-    val call: Call<com.RipeChecker.RiCek.Response?>? = retrofitAPI.postData(dataModel)
+    val call: Call<com.RipeChecker.RiCek.Response?>? = retrofitAPI.postData(imageMultipart)
     call!!.enqueue(object : Callback<com.RipeChecker.RiCek.Response?> {
         override fun onResponse(call: Call<com.RipeChecker.RiCek.Response?>?, response: Response<com.RipeChecker.RiCek.Response?>) {
-            Toast.makeText(context, "Sedang Proses", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Loading", Toast.LENGTH_SHORT).show()
             val hasil: com.RipeChecker.RiCek.Response? = response.body()
             val respons =
                 "Result: " + "\n" + "Predicted Class : " + hasil!!.predictedClass + "\n" + " Confidence: " + hasil!!.confidence
